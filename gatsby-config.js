@@ -3,7 +3,7 @@ module.exports = {
     title: `Try It Out Tuesday`,
     author: `Michael Christen`,
     description: `A blog about friendship and food in that order!`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://tryitouttuesday.com`,
     social: {
       twitter: ``,
     },
