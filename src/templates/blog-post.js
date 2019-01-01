@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from 'gatsby-image'
 import { Link, graphql } from 'gatsby'
 
 import Bio from '../components/Bio'
@@ -16,6 +17,7 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
+		<Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} sizes={post.frontmatter.featuredImage.childImageSharp.sizes} />
         <p
           style={{
             ...scale(-1 / 5),
@@ -80,6 +82,13 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        featuredImage {
+            childImageSharp{
+                sizes(maxWidth: 630) {
+                    ...GatsbyImageSharpSizes
+                }
+            }
+        }
       }
     }
   }

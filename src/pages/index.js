@@ -1,4 +1,5 @@
 import React from 'react'
+import Img from 'gatsby-image'
 import { Link, graphql } from 'gatsby'
 
 import Bio from '../components/Bio'
@@ -32,6 +33,7 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
+              <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid} sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />
               <small>{node.frontmatter.date}</small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </div>
@@ -61,6 +63,13 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            featuredImage {
+                childImageSharp{
+                    sizes(maxWidth: 630) {
+                        ...GatsbyImageSharpSizes
+                    }
+                }
+            }
           }
         }
       }
