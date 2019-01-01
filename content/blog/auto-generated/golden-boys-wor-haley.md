@@ -1,5 +1,5 @@
 ---
-title: Golden Boys w/ Haley?
+title: Golden Boys w/ Haley
 date: '2018-03-27'
 ---
 
