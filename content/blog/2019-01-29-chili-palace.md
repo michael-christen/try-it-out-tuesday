@@ -14,6 +14,6 @@ chili.
 The Moth itself was a neat collection of stories from people with various
 backgrounds. The theme was "Backwards" and everyone shared stories, ranging
 from dealing with death to learning how to drive at an age most would consider
-to young. Overall, another great Try it Out Tuesday!
+too young. Overall, another great Try it Out Tuesday!
 
 ![Moth Speakers](./pics/moth.jpg)
